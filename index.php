@@ -18,13 +18,9 @@
             background-color: #2E7D32;
             color: white;
             position: fixed;
-            /* Add this to fix the header */
             top: 0;
-            /* Stick it to the top */
             width: 100%;
-            /* Full width */
             z-index: 1000;
-            /* Ensure it's on top of other content */
         }
 
         .hero {
@@ -33,11 +29,8 @@
             position: relative;
             color: white;
             text-align: center;
-            /* Add padding to prevent overlap with fixed header */
             padding-top: 80px;
-            /* Adjust as needed based on header height */
             overflow: hidden;
-            /* Added to contain the overlay */
         }
 
         .overlay {
@@ -91,12 +84,9 @@
         }
 
         .vertical-line {
-            /* New CSS class for the vertical line */
             border-left: 1px solid #ddd;
             height: 100px;
-            /* Adjust height as needed */
             margin: 0 20px;
-            /* Add some horizontal spacing */
         }
 
         .fade-in {
@@ -113,32 +103,26 @@
         /* Staggered transition for buttons and title */
         .nav-link.fade-in {
             transition-delay: 0.1s;
-            /* Delay for the first button */
         }
 
         .nav-link.fade-in:nth-child(2) {
             transition-delay: 0.2s;
-            /* Delay for the second button */
         }
 
         .nav-link.fade-in:nth-child(3) {
             transition-delay: 0.3s;
-            /* Delay for the third button */
         }
 
         .nav-link.fade-in:nth-child(4) {
             transition-delay: 0.4s;
-            /* Delay for the fourth button */
         }
 
         .btn-register-red.fade-in {
             transition-delay: 0.5s;
-            /* Delay for the register button */
         }
 
         h1.fade-in {
             transition-delay: 0.6s;
-            /* Delay for the title */
         }
 
         h2.fade-in {
@@ -156,16 +140,13 @@
         /* Footer styles */
         footer {
             background-color: #f8f9fa;
-            /* Light background similar to Bootstrap's light */
             padding: 20px 0;
             text-align: center;
             font-size: 0.8rem;
-            /* Smaller font size */
         }
 
         footer a {
             color: #007bff;
-            /* Bootstrap primary color for links */
             text-decoration: none;
             margin: 0 10px;
         }
@@ -203,7 +184,6 @@
         /* Organizational Chart Styles with Photos */
         .org-chart {
             background-color: #ffffff;
-            /* A light background */
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -226,6 +206,7 @@
             display: flex;
             justify-content: center;
             margin-bottom: 20px;
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
         }
 
         .org-chart-node {
@@ -234,10 +215,10 @@
             align-items: center;
             border: 1px solid #ddd;
             padding: 10px 20px;
-            margin: 0 10px;
+            margin: 10px; /* Increased margin for better spacing */
             border-radius: 5px;
-            width: 150px;
-            /* Adjust width as needed */
+            width: 180px;  /* Increased width */
+            box-sizing: border-box; /* Include padding in width */
         }
 
         .org-chart-node img {
@@ -245,6 +226,74 @@
             height: 80px;
             border-radius: 50%;
             margin-bottom: 10px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero {
+                height: 300px;
+                padding-top: 60px;
+            }
+
+            .about .col-md-4 {
+                margin-bottom: 20px;
+            }
+
+            .vertical-line {
+                display: none; /* Hide vertical line on smaller screens */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                height: 250px;
+                padding-top: 50px;
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero p {
+                font-size: 0.9em;
+            }
+
+            .org-chart-node {
+                width: 150px;
+                margin: 5px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                height: 200px;
+                padding-top: 40px;
+            }
+
+            .hero h1 {
+                font-size: 1.5em;
+            }
+
+            .hero p {
+                font-size: 0.8em;
+            }
+
+            .org-chart-node {
+                width: 100%; /* Full width on extra small screens */
+                margin: 10px 0;
+            }
+
+            .contact iframe {
+                width: 100%;
+                height: 300px;
+            }
+        }
+
+        /* Responsive iframe */
+        .contact iframe {
+            width: 100%; /* Make it fill the container */
+            height: 450px;
+            border: 0;
         }
     </style>
 </head>
@@ -309,13 +358,20 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
-                            <li class="nav-item"><a class="nav-link btn btn-danger fade-in"
-                                    style="background-color: transparent;" href="landing.php"><?= __('home') ?></a></li>
-                            <li class="nav-item"><a class="nav-link btn btn-danger fade-in"
-                                    style="background-color: transparent;" href="about.php"><?= __('about_us') ?></a></li>
-                            <li class="nav-item"><a class="nav-link btn btn-danger fade-in"
-                                    style="background-color: transparent;" href="#events"><?= __('events') ?></a></li>
-                            <li class="nav-item"><a class="nav-link btn btn-danger fade-in" href="login.php"><?= __('login') ?></a>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-danger fade-in" style="background-color: transparent;"
+                                    href="landing.php"><?= __('home') ?></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-danger fade-in" style="background-color: transparent;"
+                                    href="about.php"><?= __('about_us') ?></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-danger fade-in" style="background-color: transparent;"
+                                    href="#events"><?= __('events') ?></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-danger fade-in" href="login.php"><?= __('login') ?></a>
                             </li>
                         </ul>
                     </div>
@@ -337,9 +393,9 @@
     <section class="about py-5 fade-in">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-4 d-flex align-items-center">
+                <div class="col-md-4 mb-4 mb-md-0 d-flex align-items-center">
                     <h2 class="fade-in"><?= __('digicomm') ?></h2>
-                    <div class="vertical-line"></div>
+                    <div class="vertical-line d-none d-md-block"></div>
                 </div>
                 <div class="col-md-8">
                     <p><?= __('welcome') ?></p>
@@ -427,7 +483,7 @@
     <section class="events py-5 fade-in" id="events">
         <div class="container">
             <h2 class="text-center fade-in"><?= __('events') ?></h2>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
                 <div class="col">
                     <div class="event-item text-center">
                         <img src="clean.jpg" alt="Community Clean-Up" class="img-fluid">
@@ -516,9 +572,9 @@
 
             <h2 class="active fade-in"><?= __('or visit us') ?></h2>
             <div class="mt-4">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1622.2333794398312!2d121.03328052168555!3d14.749698216901743!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b13770b364fb%3A0xbb0c893e3f8c970d!2sBarangay%20173-Congress%20Hall%20(%20PUNONG%20BARANGAY%20OFFICE)!5e0!3m2!1sen!2sph!4v1743494505324!5m2!1sen!2sph" width="600" height="450" style="border:0;"
-                    allow
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.777448880898!2d120.97814787478395!3d14.74974878557858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397af23891991df%3A0x4919133ad329219b!2sBarangay%20173%20Hall!5e0!3m2!1sen!2sph!4v1713194888987!5m2!1sen!2sph"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
