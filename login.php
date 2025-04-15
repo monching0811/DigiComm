@@ -1,9 +1,7 @@
 <?php
-// Database Connection Details (Replace with your actual credentials)
-$host = "localhost";
-$username = "root";
-$password = "081100";
-$dbname = "digicomm";
+
+include_once("connections.php");
+$conn = connection(); // Connect to the database
 
 // Function to sanitize input data
 function sanitize_input($data)
@@ -29,6 +27,7 @@ $translations = [
         'forgot_password' => 'Forgot Password?',
         'register' => 'Register',
         'invalid_credentials' => 'Invalid username or password.',
+        'please_enter_credentials' => 'Please enter both username and password.',
     ],
     'tl' => [
         'login_title' => 'Mag-login Dito',
@@ -38,6 +37,7 @@ $translations = [
         'forgot_password' => 'Nakalimutan ang Password?',
         'register' => 'Magrehistro',
         'invalid_credentials' => 'Hindi wastong username o password.',
+        'please_enter_credentials' => 'Mangyaring ilagay ang username at password.',
     ],
 ];
 
@@ -55,44 +55,48 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Basic form validation (you might add more client-side validation)
     if (empty($username) || empty($password)) {
-        $error_message = __("Please enter both username and password.");
+        $error_message = __("please_enter_credentials");
     } else {
-        // Create connection
-        $conn = new mysqli("localhost", "root", "081100", "digicomm");
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
 
         // Query the database to check for the user
         $sql = "SELECT id, password_hash FROM residents WHERE username = ?";
+        // Use the database connection established in connections.php
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("s", $username);
-        $stmt->execute();
-        $stmt->store_result();
 
-        if ($stmt->num_rows == 1) {
-            $stmt->bind_result($user_id, $hashed_password);
-            $stmt->fetch();
+        if ($stmt) {
+            $stmt->bind_param("s", $username);
+            $stmt->execute();
+            $stmt->store_result();
 
-            // Verify the password
-            if (password_verify($password, $hashed_password)) {
-                // Password is correct, login successful
-                // Start a session and store the user ID
-                session_start();
-                $_SESSION['user_id'] = $user_id;
+            if ($stmt->num_rows == 1) {
+                $stmt->bind_result($user_id, $hashed_password);
+                $stmt->fetch();
 
-                echo "<script>alert('Login successful!'); window.location.href = 'dashboard.php';</script>";
-                exit;
+                // Verify the password
+                if (password_verify($password, $hashed_password)) {
+                    // Password is correct, login successful
+                    // Start a session and store the user ID
+                    session_start();
+                    $_SESSION['user_id'] = $user_id;
+
+                    echo "<script>alert('Login successful!'); window.location.href = 'dashboard.php';</script>";
+                    exit;
+                } else {
+                    // Password is incorrect
+                    $error_message = __("invalid_credentials");
+                }
             } else {
-                // Password is incorrect
+                // No user found with that username
                 $error_message = __("invalid_credentials");
             }
+            $stmt->close();
         } else {
-            // No user found with that username
-            $error_message = __("invalid_credentials");
+            // Error preparing the SQL statement
+            $error_message = "Database error: Could not prepare statement.";
+            // Log the error for debugging purposes
+            error_log("Database prepare error: " . $con->error);
         }
-        $stmt->close();
-        $conn->close();
+        $con->close();
     }
 }
 ?>
@@ -133,11 +137,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             /* Initial opacity for fade-in effect */
             transition: opacity 0.5s ease;
             /* Fade-in body transition */
-            background-image: url('cover.jpg'); /* Add your image path */
+            background-image: url('cover.jpg');
+            /* Add your image path */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            min-height: 100vh; /* Ensure full viewport height is covered */
+            min-height: 100vh;
+            /* Ensure full viewport height is covered */
         }
 
         body.loaded {
@@ -148,7 +154,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         .login-container {
             display: flex;
             min-height: 100vh;
-            background: linear-gradient(297deg, rgba(254, 168, 0, 0.5) 0.34%, rgba(0, 163, 85, 0.5) 100%); /* Add semi-transparent gradient overlay */
+            background: linear-gradient(297deg, rgba(254, 168, 0, 0.5) 0.34%, rgba(0, 163, 85, 0.5) 100%);
+            /* Add semi-transparent gradient overlay */
         }
 
         .branding-section {
@@ -197,7 +204,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             /* Adjusted max-width */
             width: 80%;
             /* Added width */
-            background-color: rgb(8, 168, 48);;
+            background-color: rgb(8, 168, 48);
+            ;
         }
 
         .form-title {
@@ -240,15 +248,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
 
         .submit-button:hover {
-            background-color:rgb(147, 125, 125);
+            background-color: rgb(147, 125, 125);
         }
 
-        .form-links{
+        .form-links {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
         }
-        .form-links a:hover{
+
+        .form-links a:hover {
             color: rgb(250, 65, 65);
         }
 
