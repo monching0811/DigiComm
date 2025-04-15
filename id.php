@@ -1,17 +1,6 @@
 <?php
-// Database connection details (replace with your actual credentials)
-$host = "localhost";
-$username = "root";
-$password = "081100";
-$dbname = "digicomm";
-
-// Create connection
-$conn = new mysqli($host, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include_once("connections.php");
+$conn = connection(); // Connect to the database
 
 // Start session to access user data
 session_start();
@@ -63,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("sssssssis", $firstName, $middleName, $lastName, $address, $birthdate, $occupation, $profilePicture, $age, $mobileNumber); // Bind age and mobile number
 
     if ($stmt->execute()) {
-        echo "<script>alert('Barangay ID application submitted successfully!');</script>";
+        echo "<script>alert('Barangay ID application submitted successfully!'); window.location.href = 'id.php';</script>";
     } else {
         echo "<script>alert('Error: " . $stmt->error . "');</script>";
     }

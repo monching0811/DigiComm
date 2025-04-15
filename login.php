@@ -1,9 +1,11 @@
 <?php
-// Database Connection Details (Replace with your actual credentials)
-$host = "localhost";
-$username = "root";
-$password = "081100";
-$dbname = "digicomm";
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+include_once("connections.php");
+$conn = connection(); // Connect to the database
+
 
 // Function to sanitize input data
 function sanitize_input($data)
@@ -57,11 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($username) || empty($password)) {
         $error_message = __("Please enter both username and password.");
     } else {
-        // Create connection
-        $conn = new mysqli("localhost", "root", "081100", "digicomm");
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+
 
         // Query the database to check for the user
         $sql = "SELECT id, password_hash FROM residents WHERE username = ?";

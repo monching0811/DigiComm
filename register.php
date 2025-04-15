@@ -1,9 +1,9 @@
 <?php
-// Database Connection Details (Replace with your actual credentials)
-$host = "localhost";
-$username = "root";
-$password = "081100";
-$dbname = "digicomm";
+
+
+include_once("connections.php");
+$conn = connection(); // Connect to the database
+
 
 // Function to sanitize input data
 function sanitize_input($data) {
@@ -154,11 +154,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Hash the password
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        // Create connection
-        $conn = new mysqli("localhost", "root", "081100", "digicomm");
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
 
         // Check if first and last name match in registered_residents table
         $stmt_check = $conn->prepare("SELECT id FROM registered_residents WHERE first_name = ? AND last_name = ?");
