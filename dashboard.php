@@ -5,10 +5,16 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
+// Database Connection Details (Replace with your actual credentials)
+$host = "localhost";
+$username = "root";
+$password = "081100";
+$dbname = "digicomm";
 
-
-include_once("connections.php");
-$conn = connection(); // Connect to the database
+$conn = new mysqli("localhost", "root", "081100", "digicomm");
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 // Retrieve user information
 $user_id = $_SESSION['user_id'];

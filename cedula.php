@@ -1,6 +1,17 @@
 <?php
-include_once("connections.php");
-$conn = connection(); // Connect to the database
+// Database connection details (replace with your actual credentials)
+$host = "localhost";
+$username = "root";
+$password = "081100";
+$dbname = "digicomm";
+
+// Create connection
+$conn = new mysqli("localhost", "root", "081100", "digicomm");
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 // Start session to access user data
 session_start();

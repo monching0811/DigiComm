@@ -1,6 +1,17 @@
 <?php
-include_once("connections.php");
-$conn = connection(); // Connect to the database
+// Database connection details (replace with your actual credentials)
+$host = "localhost";
+$username = "root";
+$password = "081100";
+$dbname = "digicomm";
+
+// Create connection
+$conn = new mysqli($host, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
 // Start session to access user data
 session_start();
@@ -34,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ssssssss", $firstName, $middleName, $lastName, $address, $businessName, $businessAddress, $businessType, $mobileNumber); // Changed to mobileNumber
 
     if ($stmt->execute()) {
-        echo "<script>alert('Business Permit application submitted successfully!'); window.location.href = 'permit.php';</script>";
+        echo "<script>alert('Business Permit application submitted successfully!');</script>";
     } else {
         echo "<script>alert('Error: " . $stmt->error . "');</script>";
     }

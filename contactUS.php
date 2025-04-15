@@ -9,7 +9,6 @@
     <h1>hello</h1>
     <p>please contact us now</p>
     <p>dalian nyo</p>
-    <p>tapon ko to</p>
     
 </body>
 </html>
