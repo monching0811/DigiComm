@@ -570,11 +570,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="text" name="complete_address" placeholder="<?= __('complete_address') ?> *" class="form-input" required aria-label="Complete Address" />
             <input type="tel" name="mobile" placeholder="<?= __('mobile_number') ?> *" class="form-input" required pattern="[0-9]*" aria-label="Mobile Number" />
             <input type="email" name="email" placeholder="<?= __('email_address') ?> *" class="form-input" required aria-label="Email Address" />
-            <input type="text" name="username" placeholder="<?= __('username') ?> *" class="form-input" required minlength="6" aria-label="Username" />
+            <input type="text" name="username" placeholder="<?= __('username') ?> *" class="form-input" required minlength="6" aria-label="Username" autocomplete="off"/>
             <p class="input-hint">
                 <?= __('username_help') ?>
             </p>
-            <input type="password" name="password" placeholder="<?= __('password') ?> *" class="form-input" required minlength="8" aria-label="Password" />
+            <input type="password" name="password" placeholder="<?= __('password') ?> *" class="form-input" required minlength="8" aria-label="Password" autocomplete="off"/>
             <p class="input-hint">
                 <?= __('password_help') ?>
             </p>
