@@ -420,6 +420,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         .submit-button:hover {
             background-color: rgb(219, 31, 34);
         }
+        .cancel-link {
+            color: var(--color-link);
+            font-size: 21px;
+            text-decoration: none;
+            text-align: center;
+        }
+        .cancel-link:hover {
+            color: rgb(250, 65, 65)
+        }
 
         .login-section {
             display: flex;
@@ -645,9 +654,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </label>
                     </div>
                     <button type="submit" class="submit-button"><?= __('register_button') ?></button>
+                    <a href="index.php" class="cancel-link"><?= __('Cancel') ?></a>
                     <div class="login-section">
-                        <p class="login-text"><?= __('already_have_account') ?></p>
-                        <a href="login.php" class="login-link"><?= __('login_here') ?></a>
+                        <p class="login-text"><?= __('already_have_account') ?> <a href="login.php" class="login-link"><?= __('login_here') ?></a></p>
                     </div>
                 </form>
             </div>
