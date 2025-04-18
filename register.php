@@ -325,357 +325,442 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             color: var(--color-white);
         }
 
-.brand-name-accent {
-    color: var(--color-accent);
-}
+        .brand-name-accent {
+            color: var(--color-accent);
+        }
 
-.brand-description {
-    font-size: 20px;
-    font-weight: 700;
-    text-align: center;
-    max-width: 428px;
-}
+        .brand-description {
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            max-width: 428px;
+        }
 
-.form-section {
-    flex: 1;
-    position: relative;
-}
+        .form-section {
+            flex: 1;
+            position: relative;
+        }
 
-.form-container {
-    padding: 40px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-card);
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: var(--color-white);
-}
+        .form-container {
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-card);
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: var(--color-white);
+        }
 
-.form-title {
-    color: var(--color-primary);
-    font-size: 40px;
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 40px;
-}
+        .form-title {
+            color: var(--color-primary);
+            font-size: 40px;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+        }
 
-.registration-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
+        .registration-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
 
-.form-input {
-    width: 100%;
-    padding: 15px;
-    border: 2px solid rgba(0, 0, 0, 0.25);
-    border-radius: var(--border-radius);
-    font-family: "Merriweather", serif;
-    font-size: 16px;
-    box-shadow: var(--shadow-input);
-    background-color: var(--color-white);
-}
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(0, 0, 0, 0.25);
+            border-radius: var(--border-radius);
+            font-family: "Merriweather", serif;
+            font-size: 16px;
+            box-shadow: var(--shadow-input);
+            background-color: var(--color-white);
+        }
 
-.input-hint {
-    color: var(--color-text-muted);
-    font-size: 14px;
-    margin-top: -10px;
-}
+        .input-hint {
+            color: var(--color-text-muted);
+            font-size: 14px;
+            margin-top: -10px;
+        }
 
-.checkbox-group {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-.checkbox-input {
-    width: 20px;
-    height: 20px;
-    border: 2px solid var(--color-text-muted);
-}
+        .checkbox-input {
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--color-text-muted);
+        }
 
-.checkbox-label {
-    font-size: 16px;
-    color: var(--color-text-muted);
-}
+        .checkbox-label {
+            font-size: 16px;
+            color: var(--color-text-muted);
+        }
 
-.link-accent {
-    color: var(--color-link);
-    text-decoration: none;
-}
+        .link-accent {
+            color: var(--color-link);
+            text-decoration: none;
+        }
 
-.submit-button {
-    color: var(--color-white);
-    font-family: "Merriweather", serif;
-    font-size: 24px;
-    font-weight: 700;
-    padding: 15px;
-    border: none;
-    border-radius: var(--border-radius);
-    cursor: pointer;
-    margin-top: 20px;
-    background-color: var(--color-primary);
-    transition: background-color 0.3s ease;
-}
+        .submit-button {
+            color: var(--color-white);
+            font-family: "Merriweather", serif;
+            font-size: 24px;
+            font-weight: 700;
+            padding: 15px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            margin-top: 20px;
+            background-color: var(--color-primary);
+            transition: background-color 0.3s ease;
+        }
 
-.submit-button:hover {
-    background-color: rgb(147, 125, 125);
-}
+        .submit-button:hover {
+            background-color: rgb(219, 31, 34);
+        }
 
-.login-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    margin-top: 20px;
-}
+        .login-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
 
-.login-text {
-    color: var(--color-text-muted);
-    font-size: 24px;
-}
+        .login-text {
+            color: var(--color-text-muted);
+            font-size: 24px;
+        }
 
-.login-link {
-    color: var(--color-link);
-    font-size: 21px;
-    text-decoration: none;
-}
+        .login-link {
+            color: var(--color-link);
+            font-size: 21px;
+            text-decoration: none;
+        }
 
-.login-link:hover {
-    color: rgb(250, 65, 65)
-}
+        .login-link:hover {
+            color: rgb(250, 65, 65)
+        }
 
-/* Focus styles for accessibility */
-.form-input:focus,
-.checkbox-input:focus,
-.submit-button:focus,
-.login-link:focus {
-    outline: 2px solid var(--color-link);
-    outline-offset: 2px;
-}
+        /* Focus styles for accessibility */
+        .form-input:focus,
+        .checkbox-input:focus,
+        .submit-button:focus,
+        .login-link:focus {
+            outline: 2px solid var(--color-link);
+            outline-offset: 2px;
+        }
 
-/* Error message styling */
-.error-message {
-    color: #dc3545;
-    font-size: 14px;
-    margin-top: 5px;
-}
+        /* Error message styling */
+        .error-message {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 5px;
+        }
 
-/* Responsive styles (same as before) */
-@media (max-width: 991px) {
-    .registration-container {
-        flex-direction: column;
-    }
+        /* Responsive styles (same as before) */
+        @media (max-width: 991px) {
+            .registration-container {
+                flex-direction: column;
+            }
 
-    .branding-section {
-        padding: 20px;
-    }
+            .branding-section {
+                padding: 20px;
+            }
 
-    .brand-logo {
-        width: 250px;
-        height: 250px;
-    }
+            .brand-logo {
+                width: 250px;
+                height: 250px;
+            }
 
-    .brand-name {
-        font-size: 40px;
-    }
+            .brand-name {
+                font-size: 40px;
+            }
 
-    .brand-description {
-        font-size: 18px;
-    }
+            .brand-description {
+                font-size: 18px;
+            }
 
-    .form-container {
-        margin: 0;
-    }
-}
+            .form-container {
+                margin: 0;
+            }
+        }
 
-@media (max-width: 640px) {
-    .brand-logo {
-        width: 200px;
-        height: 200px;
-    }
+        @media (max-width: 640px) {
+            .brand-logo {
+                width: 200px;
+                height: 200px;
+            }
 
-    .brand-name {
-        font-size: 30px;
-    }
+            .brand-name {
+                font-size: 30px;
+            }
 
-    .brand-description {
-        font-size: 16px;
-    }
+            .brand-description {
+                font-size: 16px;
+            }
 
-    .form-title {
-        font-size: 30px;
-    }
+            .form-title {
+                font-size: 30px;
+            }
 
-    .form-input {
-        font-size: 14px;
-    }
+            .form-input {
+                font-size: 14px;
+            }
 
-    .checkbox-label {
-        font-size: 14px;
-    }
+            .checkbox-label {
+                font-size: 14px;
+            }
 
-    .submit-button {
-        font-size: 20px;
-    }
+            .submit-button {
+                font-size: 20px;
+            }
 
-    .login-text {
-        font-size: 18px;
-    }
+            .login-text {
+                font-size: 18px;
+            }
 
-    .login-link {
-        font-size: 18px;
-    }
-}
-</style>
+            .login-link {
+                font-size: 18px;
+            }
+        }
+
+        .btn-primary {
+            background-color: rgba(25, 163, 82, 0.81); /* Example primary button color */
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-primary:hover {
+            background-color: rgb(219, 31, 34);
+        }
+    </style>
 
 </head>
 
 <body onload="document.body.classList.add('loaded');">
-<main class="registration-container">
-<section class="branding-section">
-    <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/67bc096b852297a6d5f13c31edab7330eb0fd1fd" alt="DigiComm Logo" class="brand-logo" />
-    <h1 class="brand-name">
-        <span class="brand-name-light">DIGI</span>
-        <span class="brand-name-accent">COMM</span>
-    </h1>
-    <p class="brand-description">
-        Simplify your interactions with the Barangay. Request essential documents like clearances and IDs online, and stay informed about upcoming events. Explore DigiComm and experience a more connected community
-    </p>
-</section>
+    <main class="registration-container">
+        <section class="branding-section">
+            <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/67bc096b852297a6d5f13c31edab7330eb0fd1fd" alt="DigiComm Logo" class="brand-logo" />
+            <h1 class="brand-name">
+                <span class="brand-name-light">DIGI</span>
+                <span class="brand-name-accent">COMM</span>
+            </h1>
+            <p class="brand-description">
+                Simplify your interactions with the Barangay. Request essential documents like clearances and IDs online, and stay informed about upcoming events. Explore DigiComm and experience a more connected community
+            </p>
+        </section>
 
-<section class="form-section">
-    <div class="form-container">
-        <h2 class="form-title"><?= __('register_title') ?></h2>
-        <?php if (!empty($errors)): ?>
-            <div class="error-container">
-                <?php foreach ($errors as $error): ?>
-                    <p class="error-message"><?= $error ?></p>
-                <?php endforeach; ?>
+        <section class="form-section">
+            <div class="form-container">
+                <h2 class="form-title"><?= __('register_title') ?></h2>
+                <?php if (!empty($errors)): ?>
+                    <div class="error-container">
+                        <?php foreach ($errors as $error): ?>
+                            <p class="error-message"><?= $error ?></p>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+                <form class="registration-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" onsubmit="return validateForm(this);">
+                    <input type="text" name="first_name" placeholder="<?= __('first_name') ?> *" class="form-input" required aria-label="First Name" />
+                    <input type="text" name="middle_name" placeholder="<?= __('middle_name') ?>" class="form-input" aria-label="Middle Name" />
+                    <input type="text" name="last_name" placeholder="<?= __('last_name') ?> *" class="form-input" required aria-label="Last Name" />
+                    <input type="date" name="birthdate" placeholder="<?= __('birthdate') ?> *" class="form-input" required aria-label="Birthdate" />
+                    <input type="number" name="age" placeholder="<?= __('age') ?> *" class="form-input" required aria-label="Age" />
+                    <select name="civil_status" class="form-input" required aria-label="Civil Status">
+                        <option value="">Select...</option>
+                        <option value="single"><?= __('single') ?></option>
+                        <option value="married"><?= __('married') ?></option>
+                        <option value="widowed"><?= __('widowed') ?></option>
+                        <option value="separated"><?= __('separated') ?></option>
+                    </select>
+                    <input type="text" name="citizenship" placeholder="<?= __('citizenship') ?> *" class="form-input" required aria-label="Citizenship" />
+                    <div class="form-group">
+                        <label for="complete_address_trigger"><?= __('Complete Address') ?> *</label>
+                        <input type="text" id="complete_address_trigger" class="form-input" placeholder="<?= __('Click to enter detailed address') ?> *" aria-label="Complete Address" onclick="showDetailedAddressFields()">
+                    </div>
+
+                    <div id="detailed_address_container" style="display: none; border: 1px solid #ccc; padding: 15px; margin-top: 10px; border-radius: 5px; background-color: #f9f9f9;">
+                        <div class="form-group">
+                            <label for="street_address"><?= __('Street Address') ?> *</label>
+                            <input type="text" id="street_address" class="form-input" placeholder="<?= __('Street number and street name') ?>" aria-label="Street Address" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="barangay"><?= __('Barangay/Village') ?></label>
+                            <input type="text" id="barangay" class="form-input" placeholder="<?= __('Barangay or Village name') ?>" aria-label="Barangay/Village" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city"><?= __('City/Municipality') ?> *</label>
+                            <input type="text" id="city" class="form-input" aria-label="City/Municipality" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="province"><?= __('Province') ?> *</label>
+                            <input type="text" id="province" class="form-input" aria-label="Province" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="postal_code"><?= __('Postal Code') ?></label>
+                            <input type="text" id="postal_code" class="form-input" placeholder="<?= __('e.g., 2009') ?>" aria-label="Postal Code">
+                        </div>
+
+                        <button type="button" class="btn btn-primary" onclick="updateAndHideAddress()">Enter Address</button>
+                    </div>
+
+                    <input type="hidden" id="complete_address" name="complete_address" required>
+
+                    <input type="tel" name="mobile" placeholder="<?= __('mobile_number') ?> *" class="form-input" required pattern="[0-9]*" aria-label="Mobile Number" maxlength="11"/>
+                    <input type="email" name="email" placeholder="<?= __('email_address') ?> *" class="form-input" required aria-label="Email Address" />
+                    <input type="text" name="username" placeholder="<?= __('username') ?> *" class="form-input" required minlength="6" aria-label="Username" autocomplete="off"/>
+                    <p class="input-hint">
+                        <?= __('username_help') ?>
+                    </p>
+                    <input type="password" name="password" placeholder="<?= __('password') ?> *" class="form-input" required minlength="8" aria-label="Password" autocomplete="off"/>
+                    <p class="input-hint">
+                        <?= __('password_help') ?>
+                    </p>
+                    <input type="password" name="confirm_password" placeholder="<?= __('confirm_password') ?> *" class="form-input" required aria-label="Confirm Password" />
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" name="agreeTerms" class="checkbox-input" required />
+                        <label for="terms" class="checkbox-label">
+                            <?= __('agree_terms') ?>
+                            <a href="term&condition.php" class="link-accent"><?= __('terms_and_conditions') ?></a>
+                            *
+                        </label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="privacy" name="agreePrivacy" class="checkbox-input" required />
+                        <label for="privacy" class="checkbox-label">
+                            <?= __('agree_privacy') ?>
+                            <a href="policy.php" class="link-accent"><?= __('privacy_policy') ?></a>
+                            *
+                        </label>
+                    </div>
+                    <button type="submit" class="submit-button"><?= __('register_button') ?></button>
+                    <div class="login-section">
+                        <p class="login-text"><?= __('already_have_account') ?></p>
+                        <a href="login.php" class="login-link"><?= __('login_here') ?></a>
+                    </div>
+                </form>
             </div>
-        <?php endif; ?>
-        <form class="registration-form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" onsubmit="return validateForm(this);">
-            <input type="text" name="first_name" placeholder="<?= __('first_name') ?> *" class="form-input" required aria-label="First Name" />
-            <input type="text" name="middle_name" placeholder="<?= __('middle_name') ?>" class="form-input" aria-label="Middle Name" />
-            <input type="text" name="last_name" placeholder="<?= __('last_name') ?> *" class="form-input" required aria-label="Last Name" />
-            <input type="date" name="birthdate" placeholder="<?= __('birthdate') ?> *" class="form-input" required aria-label="Birthdate" />
-            <input type="number" name="age" placeholder="<?= __('age') ?> *" class="form-input" required aria-label="Age" />
-            <select name="civil_status" class="form-input" required aria-label="Civil Status">
-                <option value="">Select...</option>
-                <option value="single"><?= __('single') ?></option>
-                <option value="married"><?= __('married') ?></option>
-                <option value="widowed"><?= __('widowed') ?></option>
-                <option value="separated"><?= __('separated') ?></option>
-            </select>
-            <input type="text" name="citizenship" placeholder="<?= __('citizenship') ?> *" class="form-input" required aria-label="Citizenship" />
-            <input type="text" name="complete_address" placeholder="<?= __('complete_address') ?> *" class="form-input" required aria-label="Complete Address" />
-            <input type="tel" name="mobile" placeholder="<?= __('mobile_number') ?> *" class="form-input" required pattern="[0-9]*" aria-label="Mobile Number" />
-            <input type="email" name="email" placeholder="<?= __('email_address') ?> *" class="form-input" required aria-label="Email Address" />
-            <input type="text" name="username" placeholder="<?= __('username') ?> *" class="form-input" required minlength="6" aria-label="Username" autocomplete="off"/>
-            <p class="input-hint">
-                <?= __('username_help') ?>
-            </p>
-            <input type="password" name="password" placeholder="<?= __('password') ?> *" class="form-input" required minlength="8" aria-label="Password" autocomplete="off"/>
-            <p class="input-hint">
-                <?= __('password_help') ?>
-            </p>
-            <input type="password" name="confirm_password" placeholder="<?= __('confirm_password') ?> *" class="form-input" required aria-label="Confirm Password" />
-            <div class="checkbox-group">
-                <input type="checkbox" id="terms" name="agreeTerms" class="checkbox-input" required />
-                <label for="terms" class="checkbox-label">
-                    <?= __('agree_terms') ?>
-                    <a href="term&condition.php" class="link-accent"><?= __('terms_and_conditions') ?></a>
-                    *
-                </label>
-            </div>
-            <div class="checkbox-group">
-                <input type="checkbox" id="privacy" name="agreePrivacy" class="checkbox-input" required />
-                <label for="privacy" class="checkbox-label">
-                    <?= __('agree_privacy') ?>
-                    <a href="policy.php" class="link-accent"><?= __('privacy_policy') ?></a>
-                    *
-                </label>
-            </div>
-            <button type="submit" class="submit-button"><?= __('register_button') ?></button>
-            <div class="login-section">
-                <p class="login-text"><?= __('already_have_account') ?></p>
-                <a href="login.php" class="login-link"><?= __('login_here') ?></a>
-            </div>
-        </form>
-    </div>
-</section>
-</main>
-<script>
-function validateForm(form) {
-    const inputs = form.querySelectorAll('input[required]');
-    let isValid = true;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const passwordMinLength = 8;
-    const usernameMinLength = 6;
-    for (const input of inputs) {
-        if (input.value.trim() === '') {
-            displayError(input, '<?= __('required_field') ?>');
-            isValid = false;
-        } else if (input.type === 'email' && !emailRegex.test(input.value)) {
-            displayError(input, '<?= __('invalid_email') ?>');
-            isValid = false;
-        } else if (input.id === 'password' && input.value.length < passwordMinLength) {
-            displayError(input, `<?= __('password_too_short') ?>`);
-            isValid = false;
-        } else if (input.id === 'username' && input.value.length < usernameMinLength) {
-            displayError(input, `Username must be at least ${usernameMinLength} characters long.`);
-            isValid = false;
-        } else if (input.id === 'confirmPassword' && form.querySelector('input[name="password"]').value !== input.value) {
-            displayError(input, '<?= __('passwords_dont_match') ?>');
-            isValid = false;
-        } else {
-            clearError(input);
+        </section>
+    </main>
+    <script>
+        function validateForm(form) {
+            const inputs = form.querySelectorAll('input[required]');
+            let isValid = true;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const passwordMinLength = 8;
+            const usernameMinLength = 6;
+            for (const input of inputs) {
+                if (input.value.trim() === '') {
+                    displayError(input, '<?= __('required_field') ?>');
+                    isValid = false;
+                } else if (input.type === 'email' && !emailRegex.test(input.value)) {
+                    displayError(input, '<?= __('invalid_email') ?>');
+                    isValid = false;
+                } else if (input.id === 'password' && input.value.length < passwordMinLength) {
+                    displayError(input, `<?= __('password_too_short') ?>`);
+                    isValid = false;
+                } else if (input.id === 'username' && input.value.length < usernameMinLength) {
+                    displayError(input, `Username must be at least ${usernameMinLength} characters long.`);
+                    isValid = false;
+                } else if (input.id === 'confirmPassword' && form.querySelector('input[name="password"]').value !== input.value) {
+                    displayError(input, '<?= __('passwords_dont_match') ?>');
+                    isValid = false;
+                } else {
+                    clearError(input);
+                }
+            }
+
+            const agreeTerms = form.querySelector('input[name="agreeTerms"]');
+            const agreePrivacy = form.querySelector('input[name="agreePrivacy"]');
+            if (agreeTerms && !agreeTerms.checked) {
+                displayError(agreeTerms.closest('.checkbox-group'), '<?= __('agree_terms_error') ?>');
+                isValid = false;
+            }
+            if (agreePrivacy && !agreePrivacy.checked) {
+                displayError(agreePrivacy.closest('.checkbox-group'), '<?= __('agree_privacy_error') ?>');
+                isValid = false;
+            }
+
+            return isValid;
         }
-    }
 
-    const agreeTerms = form.querySelector('input[name="agreeTerms"]');
-    const agreePrivacy = form.querySelector('input[name="agreePrivacy"]');
-    if (agreeTerms && !agreeTerms.checked) {
-        displayError(agreeTerms.closest('.checkbox-group'), '<?= __('agree_terms_error') ?>');
-        isValid = false;
-    }
-    if (agreePrivacy && !agreePrivacy.checked) {
-        displayError(agreePrivacy.closest('.checkbox-group'), '<?= __('agree_privacy_error') ?>');
-        isValid = false;
-    }
+        function displayError(input, message) {
+            const errorDiv = document.createElement('div');
+            errorDiv.classList.add('error-message');
+            errorDiv.textContent = message;
+            const parent = input.closest('.form-input') ? input.closest('.form-input') : input.closest('.checkbox-group');
+            if (parent) {
+                parent.parentNode.insertBefore(errorDiv, parent.nextSibling);
+            }
+            input.style.borderColor = '#dc3545';
+        }
 
-    return isValid;
-}
+        function clearError(input) {
+            input.style.borderColor = '';
+            const errorDiv = input.closest('.form-input') ? input.closest('.form-input').parentNode.querySelector('.error-message') : input.closest('.checkbox-group').parentNode.querySelector('.error-message');
+            if (errorDiv) {
+                errorDiv.remove();
+            }
+        }
 
-function displayError(input, message) {
-    const errorDiv = document.createElement('div');
-    errorDiv.classList.add('error-message');
-    errorDiv.textContent = message;
-    const parent = input.closest('.form-input') ? input.closest('.form-input') : input.closest('.checkbox-group');
-    if (parent) {
-        parent.parentNode.insertBefore(errorDiv, parent.nextSibling);
-    }
-    input.style.borderColor = '#dc3545';
-}
-
-function clearError(input) {
-    input.style.borderColor = '';
-    const errorDiv = input.closest('.form-input') ? input.closest('.form-input').parentNode.querySelector('.error-message') : input.closest('.checkbox-group').parentNode.querySelector('.error-message');
-    if (errorDiv) {
-        errorDiv.remove();
-    }
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    const registrationForm = document.querySelector('form');
-    if (registrationForm) {
-        registrationForm.addEventListener('submit', function(event) {
-            if (!validateForm(this)) {
-                event.preventDefault();
+        document.addEventListener('DOMContentLoaded', function() {
+            const registrationForm = document.querySelector('form');
+            if (registrationForm) {
+                registrationForm.addEventListener('submit', function(event) {
+                    if (!validateForm(this)) {
+                        event.preventDefault();
+                    }
+                });
             }
         });
-    }
-});
-</script>
+
+        const completeAddressTrigger = document.getElementById('complete_address_trigger');
+        const detailedAddressContainer = document.getElementById('detailed_address_container');
+        const streetAddressInput = document.getElementById('street_address');
+        const barangayInput = document.getElementById('barangay');
+        const cityInput = document.getElementById('city');
+        const provinceInput = document.getElementById('province');
+        const postalCodeInput = document.getElementById('postal_code');
+        const completeAddressInput = document.getElementById('complete_address');
+
+        function showDetailedAddressFields() {
+            detailedAddressContainer.style.display = 'block';
+            // Optionally, focus on the first detailed field
+            streetAddressInput.focus();
+        }
+
+        function updateAndHideAddress() {
+            const street = streetAddressInput.value.trim();
+            const barangay = barangayInput.value.trim();
+            const city = cityInput.value.trim();
+            const province = provinceInput.value.trim();
+            const postalCode = postalCodeInput.value.trim();
+
+            let completeAddress = street;
+            if (barangay) {
+                completeAddress += `, ${barangay}`;
+            }
+            completeAddress += `, ${city}, ${province}`;
+            if (postalCode) {
+                completeAddress += ` ${postalCode}`;
+            }
+
+            completeAddressInput.value = completeAddress;
+            completeAddressTrigger.value = completeAddress; // Update the trigger input to show the complete address
+            detailedAddressContainer.style.display = 'none'; // Hide the detailed fields
+        }
+    </script>
 </body>
 
 </html>
