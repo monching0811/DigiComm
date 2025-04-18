@@ -404,6 +404,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             color: var(--color-link);
             text-decoration: none;
         }
+        .link-accent:hover {
+            color: rgb(250, 65, 65)
+        }
 
         .submit-button {
             color: var(--color-white);
