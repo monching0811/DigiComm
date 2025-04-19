@@ -33,7 +33,7 @@
             document.cookie = "language=" + selectedLanguage + "; path=/";
 
             // Redirect to the landing page (index.php)
-            window.location.href = "landing.php"; // Adjust to the correct landing page filename
+            window.location.href = "index.php"; // Adjust to the correct landing page filename
         });
     </script>
 
