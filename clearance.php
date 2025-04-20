@@ -1,10 +1,17 @@
 <?php
 
+// Start session to access user data
+session_start();
+
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
 include_once("connections.php");
 $conn = connection(); // Connect to the database
 
-// Start session to access user data
-session_start();
 
 // Initialize variables
 $firstName = "";
