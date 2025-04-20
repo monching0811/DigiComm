@@ -312,6 +312,7 @@
             'tagline' => '"Extends our Community Services in digital and modernized approached"',
             'register' => 'Register',
             'welcome' => 'Welcome to DigiComm, your new online platform connecting residents of Barangay 173-Congress, Zone 15, District 1, North Caloocan City, Philippines! Get easy access to important announcements, Barangay services, and stay updated on community news, all in one convenient place.',
+            'welcome_paragraph_2' => 'Experience a more connected and efficient way to interact with Barangay 173-Congress. Through DigiComm, you can easily access the latest news and announcements, stay updated on upcoming community events and plans, and find important contact information. Need to request a Barangay Clearance, ID, or other essential documents? Our online services allow you to initiate these requests conveniently from your device. While we strive for a fully digital experience, please note that some services may still require in-person or physical visit processing for verification or final issuance. We are committed to gradually expanding our online capabilities to better serve you.',
             'contact_us' => 'Contact us:',
             'visit_us' => 'Visit us:',
             'copyright' => '© 2025',
@@ -328,6 +329,7 @@
             'tagline' => '"Pinalawak ang Ating mga Serbisyo sa Komunidad sa digital at makabagong pamamaraan"',
             'register' => 'Magrehistro',
             'welcome' => 'Maligayang pagdating sa DigiComm, ang iyong bagong online platform na nag-uugnay sa mga residente ng Barangay 173-Congress, Zone 15, District 1, North Caloocan City, Philippines! Makakuha ng madaling access sa mahahalagang anunsyo, mga serbisyo ng Barangay, at manatiling updated sa mga balita sa komunidad, lahat sa isang maginhawang lugar.',
+            'welcome_paragraph_2' => 'Damhin ang mas konektado at mahusay na paraan upang makipag-ugnayan sa Barangay 173-Congress. Sa pamamagitan ng DigiComm, madali mong maa-access ang pinakabagong mga balita at anunsyo, manatiling updated sa mga paparating na kaganapan at plano ng komunidad, at hanapin ang mahalagang impormasyon sa pakikipag-ugnayan. Kailangan mo bang humiling ng Barangay Clearance, ID, o iba pang mahahalagang dokumento? Ang aming mga online na serbisyo ay nagbibigay-daan sa iyo upang simulan ang mga kahilingang ito nang maginhawa mula sa iyong device. Bagama\'t nagsusumikap kami para sa isang ganap na digital na karanasan, mangyaring tandaan na ang ilang mga serbisyo ay maaaring mangailangan pa rin ng personal o pisikal na pagbisita para sa pagpapatunay o huling pag-isyu. Kami ay nakatuon sa unti-unting pagpapalawak ng aming mga online na kakayahan upang mas mahusay na paglingkuran kayo.',
             'contact_us' => 'Makipag-ugnayan sa amin:',
             'or visit_us' => 'o Bisitahin kami:',
             'copyright' => '© 2025',
@@ -399,6 +401,7 @@
                 </div>
                 <div class="col-md-8">
                     <p><?= __('welcome') ?></p>
+                    <p><?= __('welcome_paragraph_2') ?></p>
                 </div>
             </div>
         </div>
