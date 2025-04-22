@@ -116,6 +116,9 @@
         .nav-link.fade-in:nth-child(4) {
             transition-delay: 0.4s;
         }
+        .nav-link.fade-in:nth-child(5) {
+            transition-delay: 0.5s;
+        }
 
         .btn-register-red.fade-in {
             transition-delay: 0.5s;
@@ -206,7 +209,7 @@
             display: flex;
             justify-content: center;
             margin-bottom: 20px;
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            flex-wrap: wrap;
         }
 
         .org-chart-node {
@@ -215,10 +218,10 @@
             align-items: center;
             border: 1px solid #ddd;
             padding: 10px 20px;
-            margin: 10px; /* Increased margin for better spacing */
+            margin: 10px;
             border-radius: 5px;
-            width: 180px;  /* Increased width */
-            box-sizing: border-box; /* Include padding in width */
+            width: 180px;
+            box-sizing: border-box;
         }
 
         .org-chart-node img {
@@ -240,7 +243,7 @@
             }
 
             .vertical-line {
-                display: none; /* Hide vertical line on smaller screens */
+                display: none;
             }
         }
 
@@ -279,7 +282,7 @@
             }
 
             .org-chart-node {
-                width: 100%; /* Full width on extra small screens */
+                width: 100%;
                 margin: 10px 0;
             }
 
@@ -291,7 +294,7 @@
 
         /* Responsive iframe */
         .contact iframe {
-            width: 100%; /* Make it fill the container */
+            width: 100%;
             height: 450px;
             border: 0;
         }
@@ -362,7 +365,7 @@
                         <ul class="navbar-nav">
                             <li class="nav-item">
                                 <a class="nav-link btn btn-danger fade-in" style="background-color: transparent;"
-                                    href="landing.php"><?= __('home') ?></a>
+                                    href="index.php"><?= __('home') ?></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link btn btn-danger fade-in" style="background-color: transparent;"
@@ -371,6 +374,10 @@
                             <li class="nav-item">
                                 <a class="nav-link btn btn-danger fade-in" style="background-color: transparent;"
                                     href="#events"><?= __('events') ?></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-danger fade-in" style="background-color: transparent;"
+                                    href="#contact"><?= __('contact_us') ?></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link btn btn-danger fade-in" href="login.php"><?= __('login') ?></a>
@@ -551,35 +558,28 @@
         </div>
     </section>
 
-    <section class="contact py-5 fade-in">
-        <div class="container text-center">
-            <h2 class="active fade-in"><?= __('contact_us') ?></h2>
-            <div class="d-flex justify-content-center flex-wrap gap-3 mt-4">
-
-                <div>
-                    <span>📧</span>
-                    <p><a href="mailto:congressbarangay173@gmail.com">congressbarangay173@gmail.com</a></p>
-
-                </div>
-                <div>
-                    <span>📞</span>
-                    <p>0953 594 3117</p>
-                </div>
-                <div>
-                    <span><i class="fa-brands fa-facebook"></i></span>
-                    <p><a
-                            href="https://www.facebook.com/profile.php?id=61553444116460&rdid=xJsza173FOV0wvmT&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1AZKgCjTGb%2F#">FaceBook
-                            Account</p></a>
-                </div>
-            </div>
-
-            <h2 class="active fade-in"><?= __('or visit us') ?></h2>
-            <div class="mt-4">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.777448880898!2d120.97814787478395!3d14.74974878557858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397af23891991df%3A0x4919133ad329219b!2sBarangay%20173%20Hall!5e0!3m2!1sen!2sph!4v1713194888987!5m2!1sen!2sph"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
+    <section class="contact py-5 fade-in" id="contact">
+    <div class="container text-center">
+    <h2 class="active fade-in"><?= __('contact_us') ?></h2>
+    <div class="row justify-content-center gap-3 mt-4">
+        <div class="col-md-4 col-lg-3">
+            <p><a href="mailto:congressbarangay173@gmail.com"><span>📧</span></a></p>
         </div>
+        <div class="col-md-4 col-lg-3">
+            <span>📞</span>
+            <p>0953-594-3117</p>
+        </div>
+        <div class="col-md-4 col-lg-3">    
+            <p><a href="https://www.facebook.com/profile.php?id=61553444116460&rdid=iz2LR21czyfS3SjT&share_url=https%3A%2F%2Fwww.facebook.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a></p>
+        </div>
+    </div>
+
+    <h2 class="active fade-in mt-5"><?= __('or visit us') ?></h2>
+    <p>Barangay 173-Congress Hall ( PUNONG BARANGAY OFFICE)</p>
+    <div class="mt-4">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2707.8745450071874!2d121.03064480864678!3d14.749614673355639!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b13770b364fb%3A0xbb0c893e3f8c970d!2sBarangay%20173-Congress%20Hall%20(%20PUNONG%20BARANGAY%20OFFICE)!5e1!3m2!1sen!2sph!4v1745331112568!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map of Barangay 173 Hall" aria-label="Map showing the location of Barangay 173 Hall"></iframe>
+    </div>
+</div>
     </section>
 
     <footer class="mt-5">
